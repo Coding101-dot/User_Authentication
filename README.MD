@@ -11,5 +11,5 @@
 
 
 # Clone this project open in pycharm after installing the requirements, Run python manage.py makemigrations then 
-# python mananage.py migrate and then finally python manage.py runserver
+# python manage.py migrate and then finally python manage.py runserver
 # from the command window.
