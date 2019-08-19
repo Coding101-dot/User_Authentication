@@ -1,0 +1,12 @@
+<style>
+
+</style>
+{% extends 'account/base.html' %}
+
+{% block title  %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Cashboard</h1>
+<p>Greetings worldwalker welcome to Earth, Edit your profile <a href="{% url 'edit' %}">Here</a></p>
+<p>Or you can change your password <a href="{% url 'password_change' %}">Here</a></p>
+{% endblock %}

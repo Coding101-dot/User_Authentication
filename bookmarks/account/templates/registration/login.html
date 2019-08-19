@@ -1,0 +1,34 @@
+{% extends 'account/base.html' %}
+
+{% block title %} Enter young master {% endblock %}
+
+{% block content %}
+  <h1>Be-part</h1>
+{% if form.errors %}
+   <p>
+       The credentials provided by the young master is invalid.
+       Please attempt again and may the force be with you.
+   </p>
+{% else %}
+  <p>Here is another form summoned for thy.</p>
+{% endif %}
+  <p>Join this and let's C what Appenz!! Forgetful? No fear!
+      <a href="{% url 'password_reset' %}">Just click here</a></p>
+  <p>Not registered. It takes only 2 minutes <a href="{% url 'register' %}">Quick Register</a></p>
+<p>Or can login using your account Email</p>
+  <form action="." method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <p><input type="submit" value="JOIN_THE-DARK|{SIDE}"></p>
+  </form>
+
+  <div class="social">
+      <ul>
+          <li class="facebook"><a href="{% url 'social:begin' 'facebook' %}">Sign in with Facebook</a></li>
+          <li class="twitter"><a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a></li>
+          <li class="google"><a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a></li>
+      </ul>
+  </div>
+{% endblock %}
+
